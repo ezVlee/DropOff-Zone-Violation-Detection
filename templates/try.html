@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Audio</title>
+</head>
+<body>
+  <button id="playAudioBtn">Play Audio</button>
+
+  <script>
+    document.getElementById("playAudioBtn").addEventListener("click", function() {
+      const audio = new Audio("static/voicebooking-speech.wav"); // Path yang benar di server
+      audio.play().then(() => {
+        console.log("Audio is playing!");
+      }).catch((error) => {
+        console.error("Error playing sound:", error);
+      });
+    });
+  </script>
+</body>
+</html>
